@@ -10,7 +10,7 @@ pipeline {
       steps{
         script {
           sh "docker-compose down"
-          sh "docker-compose up"
+          sh "COMPOSE_HTTP_TIMEOUT=200 docker-compose up"
         }
       }
     }
